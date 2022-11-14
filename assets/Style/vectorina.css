@@ -40,15 +40,15 @@
   stroke-miterlimit: 10; }
 
 /* обнуление и общие стили */
-.st5 {
-  fill: #f6f2e7; }
-
 * {
   transition: all 0.4s ease;
   padding: 0;
   margin: 0;
   border: 0;
   box-sizing: border-box; }
+
+.st5 {
+  fill: #ffab00; }
 
 ul li {
   list-style: none; }
@@ -96,8 +96,7 @@ body {
   position: relative;
   width: 200px;
   height: 55px;
-  background: url("/assets/logo.4f82cd73.svg") center/contain no-repeat;
-  background: url("/assets/vectorina/правильно.mp3"); }
+  background: url("../logo.4f82cd73.svg") center/contain no-repeat; }
 
 .header-score {
   font-size: 30px;

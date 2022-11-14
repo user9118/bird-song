@@ -1,4 +1,4 @@
-@import './logo';
+@import '_logo.scss';
 
 //Переменные
 $orange: #ffab00;
@@ -8,9 +8,7 @@ $white: #f5efde;
 $text: black;
 $hover: #fcb11a;
 /* обнуление и общие стили */
-.st5 {
-  fill: #f6f2e7;
-}
+
 * {
   transition: all 0.4s ease;
   padding: 0;
@@ -18,7 +16,9 @@ $hover: #fcb11a;
   border: 0;
   box-sizing: border-box;
 }
-
+.st5 {
+  fill: #ffab00;
+}
 ul li {
   list-style: none;
 }
@@ -72,8 +72,7 @@ body {
   position: relative;
   width: 200px;
   height: 55px;
-  background: url("/assets/logo.4f82cd73.svg") center/contain no-repeat;
-  background: url();
+  background: url('../logo.4f82cd73.svg') center/contain no-repeat;
 }
 
 .header-score {
