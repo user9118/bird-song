@@ -37,20 +37,19 @@ function findBird(id) {
   selectedBirdAudio.setAttribute('src', `${birdsData[roundNumber][id].audio}`);
 }
 //очистить выбор
-function clearBirdInfo(id) {
+function clearBirdInfo() {
   selectedBirdFoto.style.backgroundImage = `none`
   selectedBirdName.textContent = '';
   selectedBirdSecondName.textContent = '';
   selectedBirdText.textContent = '';
   selectedBirdAudio.classList.add('display')
-  selectedBirdAudio.setAttribute('src', `${birdsData[roundNumber][id].audio}`);
+  selectedBirdAudio.setAttribute('src', `${birdsData[roundNumber][roundBird].audio}`);
 }
 
 //round start
 let roundBird = getRandomInt();
 let questionBird = function () {
   roundFoto.style.backgroundImage = `url('../assets/vectorina/bird.jpg')`;
-  console.log(roundBird)
   roundName.textContent = `*******`;
   roundAudio.setAttribute('src', `${birdsData[roundNumber][roundBird].audio}`);
   document.querySelector('.choice-bird-1').textContent = birdsData[roundNumber][0].name;
@@ -104,9 +103,9 @@ btnNext.addEventListener('click', () => {
   categories[roundNumber].classList.add('done');
   btnNext.setAttribute('disabled', 'disabled');
   btnNext.style.opacity = 0.5;
-  questionBird();
   roundscore = 5;
-  roundBird = getRandomInt()
-  listenText.classList.remove('display')
-  clearBirdInfo()
+  roundBird = getRandomInt();
+  questionBird();
+  listenText.classList.remove('display');
+  clearBirdInfo();
 })
