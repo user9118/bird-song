@@ -42,8 +42,8 @@ function clearBirdInfo() {
   selectedBirdName.textContent = '';
   selectedBirdSecondName.textContent = '';
   selectedBirdText.textContent = '';
+  selectedBirdAudio.setAttribute('src', ``);
   selectedBirdAudio.classList.add('display')
-  selectedBirdAudio.setAttribute('src', `${birdsData[roundNumber][roundBird].audio}`);
 }
 
 //round start
@@ -105,7 +105,7 @@ btnNext.addEventListener('click', () => {
   btnNext.style.opacity = 0.5;
   roundscore = 5;
   roundBird = getRandomInt();
-  questionBird();
   listenText.classList.remove('display');
+  questionBird();
   clearBirdInfo();
 })
