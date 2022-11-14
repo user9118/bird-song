@@ -80,7 +80,6 @@ choiceBird.forEach((el) => {
     listenText.classList.add('display')
     let selectedId = el.id - 1;
     findBird(selectedId);
-    //selectedBirdFoto.style.backgroundImage = `url('${birdsData[0][roundBird].image}')`;
     if (el.textContent == `${birdsData[roundNumber][roundBird].name}`) {
       el.firstChild.style.backgroundColor = 'green';
       displayBird();
