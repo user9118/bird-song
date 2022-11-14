@@ -48,9 +48,9 @@ function clearBirdInfo(id) {
 
 //round start
 let roundBird = getRandomInt();
-console.log(roundBird)
 let questionBird = function () {
   roundFoto.style.backgroundImage = `url('../assets/vectorina/bird.jpg')`;
+  console.log(roundBird)
   roundName.textContent = `*******`;
   roundAudio.setAttribute('src', `${birdsData[roundNumber][roundBird].audio}`);
   document.querySelector('.choice-bird-1').textContent = birdsData[roundNumber][0].name;
