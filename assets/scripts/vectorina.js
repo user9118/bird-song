@@ -50,7 +50,7 @@ function clearBirdInfo(id) {
 let roundBird = getRandomInt();
 console.log(roundBird)
 let questionBird = function () {
-  roundFoto.style.backgroundImage = `url('/assets/vectorina/bird.jpg')`;
+  roundFoto.style.backgroundImage = `url('../assets/vectorina/bird.jpg')`;
   roundName.textContent = `*******`;
   roundAudio.setAttribute('src', `${birdsData[roundNumber][roundBird].audio}`);
   document.querySelector('.choice-bird-1').textContent = birdsData[roundNumber][0].name;
@@ -70,8 +70,8 @@ let questionBird = function () {
 questionBird();
 
 //выбор и проверка
-let right = new Audio('/assets/vectorina/правильно.mp3')
-let error = new Audio('/assets/vectorina/ошибка.mp3')
+let right = new Audio('../assets/vectorina/правильно.mp3')
+let error = new Audio('../assets/vectorina/ошибка.mp3')
 let choiceBird = document.querySelectorAll('.choice-bird-x');
 let listenText = document.querySelector('.listen');
 let roundscore = 5;
