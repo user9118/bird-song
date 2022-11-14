@@ -52,7 +52,7 @@ a:visited {
   color: black; }
 
 a:hover {
-  color: #582996; }
+  color: black; }
 
 button {
   cursor: pointer; }
@@ -116,11 +116,11 @@ section {
 .nav-main {
   justify-self: center;
   color: black;
-  font-size: 20px; }
+  font-size: 24px; }
 
 .nav-vectorina {
   justify-self: end;
-  font-size: 20px; }
+  font-size: 24px; }
 
 .main {
   display: flex;
@@ -150,7 +150,7 @@ h2 {
   transition: all 0.4s ease; }
 
 .start-game:hover {
-  background: #582996; }
+  background: black; }
 
 .start-game:active {
   background: green; }
@@ -165,8 +165,8 @@ h2 {
   border: 2px solid black; }
 
 .advice:hover {
-  color: #582996;
-  border: 2px solid #582996; }
+  color: black;
+  border: 2px solid black; }
 
 .advice:active {
   border: 2px solid green; }

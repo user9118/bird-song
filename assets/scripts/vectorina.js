@@ -70,8 +70,8 @@ let questionBird = function () {
 questionBird();
 
 //выбор и проверка
-let right = new Audio('../assets/vectorina/правильно.mp3')
-let error = new Audio('../assets/vectorina/ошибка.mp3')
+let right = new Audio('../assets/vectorina/right.mp3')
+let error = new Audio('../assets/vectorina/eror.mp3')
 let choiceBird = document.querySelectorAll('.choice-bird-x');
 let listenText = document.querySelector('.listen');
 let roundscore = 5;
@@ -88,6 +88,7 @@ choiceBird.forEach((el) => {
       globalSourse = globalSourse + roundscore;
       headerScore.textContent = `Счет: ${globalSourse}`;
       right.play();
+      roundAudio.pause();
     } else {
       roundscore = roundscore - 1;
       el.firstChild.style.backgroundColor = 'red';
