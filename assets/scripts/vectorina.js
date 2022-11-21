@@ -74,32 +74,39 @@ let error = new Audio('../assets/vectorina/eror.mp3')
 let choiceBird = document.querySelectorAll('.choice-bird-x');
 let listenText = document.querySelector('.listen');
 let roundscore = 5;
+let roundDone = false;
+let btnNext = document.querySelector('.btn');
+
 choiceBird.forEach((el) => {
   el.addEventListener('click', () => {
-    listenText.classList.add('display')
     let selectedId = el.id - 1;
+    listenText.classList.add('display')
     findBird(selectedId);
-    if (el.textContent == `${birdsData[roundNumber][roundBird].name}`) {
-      el.firstChild.style.backgroundColor = 'green';
-      displayBird();
-      btnNext.removeAttribute('disabled');
-      btnNext.style.opacity = 1;
-      globalSourse = globalSourse + roundscore;
-      headerScore.textContent = `Счет: ${globalSourse}`;
-      right.play();
-      roundAudio.pause();
-    } else {
-      roundscore = roundscore - 1;
-      el.firstChild.style.backgroundColor = 'red';
-      error.play();
-    }
+    if (roundDone == true) {
+    } else if (roundDone == false) {
+      if (el.textContent != `${birdsData[roundNumber][roundBird].name}` && el.classList.contains('answed')) {
+      } else if(el.textContent != `${birdsData[roundNumber][roundBird].name}`) {
+        el.classList.add('answed');
+        roundscore = roundscore - 1;
+        el.firstChild.style.backgroundColor = 'red';
+        error.play();
+      } else {
+        displayBird();
+        el.firstChild.style.backgroundColor = 'green';
+        btnNext.removeAttribute('disabled');
+        btnNext.style.opacity = 1;
+        globalSourse = globalSourse + roundscore;
+        headerScore.textContent = `Счет: ${globalSourse}`;
+        right.play();
+        roundAudio.pause();
+        roundDone = true;
+      };
+    };
   });
 });
 
 //слудующий раунд
-let btnNext = document.querySelector('.btn');
-btnNext.addEventListener('click', () => {
-  roundNumber ++;
+function nextRound() {
   categories[roundNumber].classList.add('done');
   btnNext.setAttribute('disabled', 'disabled');
   btnNext.style.opacity = 0.5;
@@ -108,4 +115,30 @@ btnNext.addEventListener('click', () => {
   listenText.classList.remove('display');
   questionBird();
   clearBirdInfo();
+  choiceBird.forEach((el) => {
+    el.classList.remove('answed');
+  });
+}
+let main = document.querySelector('.main');
+let soursePage = document.querySelector('.sourse-game');
+
+btnNext.addEventListener ('click', () => {
+  roundNumber ++;
+  roundDone = false;
+  console.log(roundNumber);
+  if(roundNumber < 5) {
+    nextRound();
+  } else if (roundNumber == 5) {
+    nextRound();
+    btnNext.textContent = 'Посмотреть счёт';
+  } else if (roundNumber == 6) {
+    main.classList.add('display')
+    console.log();
+    soursePage.classList.remove('display');
+    document.querySelector('.sourse-game-attempt').textContent = `${globalSourse}`
+    if (globalSourse == 30) {
+      document.querySelector('.btn-new_game').classList.add('display')
+      document.querySelector('.sourse-praise').classList.remove('display')
+    }
+  }
 })
