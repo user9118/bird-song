@@ -1,0 +1,33 @@
+.header {
+  background: white;
+}
+
+.container {
+  background-color: #ffab00;
+  border-radius: 0 0 50px 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.content {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  justify-self: start;
+  width: 200px;
+
+  background: url("../logo.4f82cd73.svg") center/contain no-repeat;
+}
+
+.sourse {
+  justify-self: end;
+  font-size: 30px;
+  justify-self: end;
+}

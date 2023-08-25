@@ -1,0 +1,40 @@
+.body{
+  height: 100svh;
+  background: #ffab00;
+}
+
+/* Футер */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 24px;
+}
+
+.footer-year {
+  justify-self: center;
+}
+
+.footer-logo {
+  justify-self: end;
+  width: 100px;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 40px;
+  }
+  .footer-autor {
+    justify-self: center;
+  }
+  .footer-year {
+    justify-self: center;
+  }
+  .footer-logo {
+    justify-self: center;
+    padding-top: 10px;
+  }
+}

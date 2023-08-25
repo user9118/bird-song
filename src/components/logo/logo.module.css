@@ -1,0 +1,17 @@
+.logo {
+  position: relative;
+  width: 200px;
+  height: 55px;
+  background: url("/src/assets/img/logo.png") center/contain no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    width: 160px;
+  }
+}
+@media (max-width: 640px) {
+  .logo {
+    width: 130px;
+  }
+}

@@ -1,0 +1,22 @@
+.footer {
+  background: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  border-radius: 0 50px 0 0;
+  background: #ffab00;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  font-size: 24px;
+}

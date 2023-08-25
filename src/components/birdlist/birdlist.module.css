@@ -1,0 +1,18 @@
+.birdlist {
+  color: white;
+  background: black;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  border-radius: 13px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+}
+
+.li {
+  padding: 8px 40px;
+}
+.li:hover {
+  transition: all 0.4s ease;
+  background: orange;
+}

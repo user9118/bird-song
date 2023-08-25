@@ -1,0 +1,46 @@
+.birdRaund{
+  margin-top: 30px;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  min-height: 220px;
+  background: black;
+  width: 100%;
+  border-radius: 13px;
+  border-radius: 13px;
+  box-shadow: 5px 5px 0px #ffab00;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 40px;
+  align-items: center;
+  color: white;
+}
+
+.img{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 220px;
+  height: 180px;
+  border-radius: 10px;
+}
+
+.name{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.audio{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
