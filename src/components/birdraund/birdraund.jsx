@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
 import styles from "./birdraund.module.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import birdsData from "/src/data_birds";
 
-function Birdraund({ roundBird }) {
+function Birdraund() {
+  const rightBird = useSelector((state) => state.counter.rightBird)
+  const roundWin = useSelector((state) => state.counter.roundWin); // 
   const round = useSelector((state) => state.counter.round);
-  const data = birdsData[round][roundBird];
-  const roundWin = false;
+  const data = birdsData[round][rightBird];
   return (
     <div className={styles.birdRaund}>
       {roundWin ? (
         <>
-          <div className={styles.img} style={{backgroundImage: 'url(/src/assets/img/bird.jpg)'}}></div>
-          <div className="name">{data.name}</div>
+          <div className={styles.img} style={{backgroundImage: `url(${data.image})`}}></div>
+          <div className="name">{data.name}<br/>{data.species}</div>
           <audio controls src={data.audio}></audio>
-        </>
+      </>
       ) : (
         <>
           <div className={styles.img} style={{backgroundImage: 'url(/src/assets/img/bird.jpg)'}}></div>

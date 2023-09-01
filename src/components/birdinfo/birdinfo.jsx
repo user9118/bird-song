@@ -13,7 +13,7 @@ function Birdinfo() {
       {typeof selectedBird == "number" ? (
         <>
           <div className={styles.flex}>
-            <div className={styles.foto}></div>
+            <div className={styles.foto} style={{backgroundImage: `url(${data.image})`}}></div>
             <div className="name">
               {data.name}
               <br />

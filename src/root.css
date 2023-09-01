@@ -116,3 +116,11 @@ section {
 body {
   background: #ffab00;
 }
+
+.answed{
+  background: green;
+}
+
+.answedBad{
+  background: red;
+}

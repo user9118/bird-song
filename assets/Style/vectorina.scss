@@ -118,7 +118,6 @@ body {
     color: $text;
     height: 100%;
     width: 100%;
-    //border-right: 1px solid $orange;
     padding: 8px 0;
     text-align: center;
 
@@ -148,7 +147,6 @@ body {
   grid-column-gap: 40px;
   align-items: center;
   background: $white;
-  //border: 2px solid $orange;
 }
 @media (max-width: 780px) {
   .round-bird {
@@ -172,7 +170,6 @@ body {
 }
 .round-name {
   font-size: 36px;
-
 }
 @media (max-width: 780px) {
   .round-name{
@@ -211,6 +208,7 @@ body {
     text-align: center;
   }
 }
+
 /* Выбор птицы */
 .choice-bird {
   color: $text;
@@ -235,13 +233,11 @@ body {
 .choice-bird-list {
   background: $white;
   height: 254px;
-  //border: 2px solid $orange;
 }
 
 .choice-bird-list li {
   padding: 8px 0;
   padding-left: 40px;
-  //border-bottom: 2px solid $orange;
 }
 
 .choice-bird-list li:first-child {

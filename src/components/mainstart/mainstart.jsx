@@ -8,7 +8,7 @@ function Mainstart() {
       <h1>Who's chiriking?</h1>
       <h2>Угадай мелодию</h2>
       <div>
-        <img className={styles.foto} src="src\assets\img\main.png" alt="" />
+        <img className={styles.foto} src="/src/assets/img/main.png" alt="" />
       </div>
       <Link to={`quiz`}>
         <button className={styles.startgame}>Начать игру</button>
@@ -16,7 +16,6 @@ function Mainstart() {
       <button className={styles.advice}>
         Послушать совет от <br /> птичьей личности
       </button>
-      
     </main>
   );
 }
