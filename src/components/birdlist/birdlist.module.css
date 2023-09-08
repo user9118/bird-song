@@ -10,9 +10,21 @@
 }
 
 .li {
-  padding: 8px 40px;
+  padding: 8px;
+  cursor: pointer;
 }
 .li:hover {
   transition: all 0.4s ease;
   background: orange;
+
+}
+
+.dot{
+  content: ' ';
+  display: inline-flex;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  margin: 0 20px;
 }

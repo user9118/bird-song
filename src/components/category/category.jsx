@@ -1,10 +1,15 @@
-import React from 'react';
-import styles from './category.module.css';
+import React, { useEffect, useRef } from "react";
+import styles from "./category.module.css";
 
-function Category() {
+function Category({ round }) {
+  const ul = useRef();
+  useEffect(() => {
+    ul.current.children[round].classList.add("done");
+  }, [round]);
+
   return (
-     <div className={styles.categories}>
-      <ul className={styles.list}>
+    <div className={styles.categories}>
+      <ul ref={ul} className={styles.list}>
         <li>Домашние</li>
         <li>Городские</li>
         <li>Зимующие</li>
@@ -12,9 +17,8 @@ function Category() {
         <li>Хищные</li>
         <li>Морские</li>
       </ul>
-     </div>
+    </div>
   )
 }
 
-export default Category
-
+export default Category;

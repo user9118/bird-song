@@ -6,7 +6,7 @@ function Header() {
   return (
      <div className={styles.header}>
       <nav className={styles.nav}>
-        <Logo className={styles.logo}/>
+        <Logo/>
         <div style={{justifySelf: 'center'}}>Abaut game</div>
         <div>more info</div>
       </nav>

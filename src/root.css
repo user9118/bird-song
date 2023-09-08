@@ -117,10 +117,7 @@ body {
   background: #ffab00;
 }
 
-.answed{
-  background: green;
-}
-
-.answedBad{
-  background: red;
+.done{
+  background-color: orange;
+  color: #000;
 }
