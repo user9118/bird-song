@@ -1,0 +1,33 @@
+.main {
+  background: #ffab00;
+}
+.wrap{
+  padding: 30px 0px;
+  background: white;
+  border-radius: 60px 0 0 60px;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 3fr 4fr;
+  grid-template-rows: 250px auto;
+}
+.btn {
+  display: flex;
+  margin: 20px auto 0;
+  font-size: 20px;
+  width: 200px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px;
+  align-items: center;
+  justify-content: center;
+ 
+}

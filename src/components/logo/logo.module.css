@@ -2,7 +2,7 @@
   position: relative;
   width: 200px;
   height: 55px;
-  background: url("/src/assets/img/logo.png") center/contain no-repeat;
+  background: url("/img/logo.png") center/contain no-repeat;
 }
 
 @media (max-width: 1024px) {

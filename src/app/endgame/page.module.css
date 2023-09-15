@@ -1,0 +1,12 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+
+}
+.sourse {
+  text-align: center;
+  font-size: 30px;
+}
